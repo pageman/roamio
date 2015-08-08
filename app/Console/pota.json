@@ -1,0 +1,118 @@
+categories: [
+	{
+		category: 'category',
+		nextCategory: 1,
+		nextResponse: 'How much are you willing to spend?',
+		options: [
+			{
+				option: '🍴 Food and Dining',
+				value: 'Food and Dining',
+				response: 'Must satisfy that craving, huh?',
+			},
+			{
+				option: '🎨 Art Appreciation',
+				value: 'Art Appreciation',
+				response: 'Feeling artsy!',
+			},
+			{
+				option: '👣 Outdoor Activities',
+				value: 'Outdoor Activities',
+				response: 'Adventures on the way!',
+			},
+			{
+				option: '✨ Nightlife',
+				value: 'Nightlife',
+				response: 'Get ready to party!',
+			},
+			{
+				option: '🏤 History and Landmark',
+				value: 'History and Landmark',
+				response: '',
+			},
+			{
+				option: '🎬 Theatre and Cinema',
+				value: 'Theatre and Cinema',
+				response: 'Witness awesome talent and performance!',
+			},
+			{
+				option: '💦 Water Activities',
+				value: 'Water Activities',
+				response: 'Prepare to get wet!',
+			},
+			{
+				option: '🏁 Fun and Games',
+				value: 'Fun and Games',
+				response: 'Exciting games await!',
+			},
+			{
+				option: '😅 I\'m not really sure',
+				value: null,
+				response: 'It\'s okay. 😉',
+			}
+		]
+	}, //category
+	{
+		category: 'max.budget',
+		nextCategory: 2,
+		nextResponse: 'May I ask who you're spending time with? 😌',
+		options: [
+			{
+				option: '🙈 ₱0',
+				value: 0,
+				response: 'Happiness is a choice. 🙌',
+			},
+			{
+				option: '💰 ₱500',
+				value: 500,
+				response: 'Nice.',
+			},
+			{
+				option: '💸 ₱1000',
+				value: 1000,
+				response: 'Great!',
+			},
+			{
+				option: '💳 ₱5000',
+				value: 5000,
+				response: 'You deserve a break.',
+			},
+			{
+				option: '💎 ₱10000',
+				value: 10000,
+				response: 'Need some kind of escape?',
+			},
+			{
+				option: '😜 Don't care',
+				value: null,
+				response: 'Wow. Let me call your bank. 🏦 Jk.',
+			}
+		]
+	}, //category
+	{
+		category: 'participants',
+		nextCategory: 3,
+		nextResponse: '',
+		options: [
+			{
+				option: '👨‍👩‍👧‍👦 Family',
+				value: 'Family',
+				response: 'Happiness is a choice. 🙌',
+			},
+			{
+				option: '❤️ Date',
+				value: 'Date',
+				response: 'Nice.',
+			},
+			{
+				option: '👥 Friends',
+				value: 'Group',
+				response: 'Great!',
+			},
+			{
+				option: '😶 Not sure.',
+				value: null,
+				response: 'Wow. Let me call your bank. 🏦 Jk.',
+			}
+		]
+	} //category
+];
