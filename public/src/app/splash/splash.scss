@@ -1,0 +1,62 @@
+.r-splash {
+    background: url('../assets/images/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 80px;
+}
+
+.r-splash__header {
+    @include rem(font-size, 48px);
+    @include rem(line-height, 48px);
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.r-splash__form {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    h1 {
+        @include rem(margin-bottom, 36px);
+    }
+}
+
+.r-splash__form-group {
+    height: 100px;
+    background: $white;
+    width: 768px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    input {
+        background: transparent;
+        border: none;
+        margin: 0;
+        outline: none;
+        @include rem(font-size, 48px);
+        @include rem(line-height, 48px);
+        @include rem(padding-left, 48px);
+        @include rem(padding-top, 24px);
+        @include rem(padding-bottom, 24px);
+        vertical-align: middle;
+        color: $grey-darkest;
+        font-family: $ff-default;
+    }
+
+    .md-button {
+        margin: 0;
+        width: 165px;
+        background: $black;
+        color: $white;
+        font-weight: 700;
+        height: 101%;
+        @include rem(font-size, $fs-h1);
+        @include rem(line-height, $fs-h1);
+        &:hover {
+            background: $grey-darker;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+<md-content layout-fill>
+    <div class="r-activity" layout="column" layout-fill layout-align="center center">
+        <div class="md-toolbar-tools">
+            <md-toolbar>
+                <md-button class="md-icon-button md-dark" aria-label="Filters" ui-sref="main">
+                    <md-icon md-svg-icon="assets/images/ic_arrow_back_white_36px.svg" dark></md-icon>
+                </md-button>
+            </md-toolbar>
+        </div>
+        <div md-content class="r-activity__content">
+            <div class="r-activity__image">
+                <img ng-src="{{vm.activity.image_path}}">
+            </div>
+            <div class="r-activity__container">
+                <h1 class="r-activity__header">{{vm.activity.title}}</h1>
+                <h4 class="r-activity__location"><md-icon>location_on</md-icon>{{vm.activity.city}} City</h4>
+                <div layout="row">
+                    <div flex="33">
+                        <h5>
+                            Operating hours
+                        </h5>
+                        <h3>08:00 AM - 05:00 PM</h3>
+                    </div>
+                    <div flex="33">
+                        <h5>
+                            Budget
+                        </h5>
+                        <h3>{{vm.activity.budget}}</h3>
+                    </div>
+                    <div flex="33">
+                        <h5>
+                            Category
+                        </h5>
+                        <h3>{{vm.activity.categories}}</h3>
+                    </div>
+                </div>
+                <div>
+                    <h5>Description</h5>
+                    <p>{{vm.activity.description}}</p>
+                </div>
+            </div>
+        </div md-content>
+    </div>
+</md-content>

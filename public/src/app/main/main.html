@@ -1,0 +1,107 @@
+<div class="r-main" layout="row" layout-fill r-pusher r-pusher-open="vm.filtersSet || vm.sidenavOpen">
+    <md-sidenav  md-component-id="left" class="r-main__sidebar md-sidenav-left" md-is-locked-open="vm.sidenavOpen || vm.filtersSet">
+        <div class="r-sidebar__category" layout="column">
+            <h5><md-icon>search</md-icon>Keyword</h5>
+            <input type="text" ng-model="vm.filters.query" placeholder="Search keyword" ng-change="vm.onChange('query', vm.filters.query)" ng-model-options="{ debounce: 1000 }">
+        </div>
+        <div class="r-sidebar__category" layout="column">
+            <h5><md-icon>location_on</md-icon>Location</h5>
+            <input type="text" ng-model="vm.filters.city" placeholder="Location" ng-change="vm.onChange('city', vm.filters.city)" ng-model-options="{ debounce: 1000 }">
+        </div>
+        <div class="r-sidebar__category" layout="column">
+            <h5><md-icon>apps</md-icon>Category</h5>
+            <ul>
+                <li ng-class="{'filter-active': vm.category === 'Food and Dining'}"
+                    ng-click="vm.toggleFilterChange('category', 'Food and Dining')">
+                    Food and Dining
+                </li>
+                <li ng-class="{'filter-active': vm.category === 'Art Appreciation'}"
+                    ng-click="vm.toggleFilterChange('category', 'Art Appreciation')">
+                    Art Appreciation
+                </li>
+                <li ng-class="{'filter-active': vm.category === 'Outdoor Activities'}"
+                    ng-click="vm.toggleFilterChange('category', 'Outdoor Activities')">
+                    Outdoor Activities
+                </li>
+                <li ng-class="{'filter-active': vm.category === 'Nightlife'}"
+                    ng-click="vm.toggleFilterChange('category', 'Nightlife')">
+                    Nightlife
+                </li>
+                <li ng-class="{'filter-active': vm.category === 'History and Landmarks'}"
+                    ng-click="vm.toggleFilterChange('category', 'History and Landmarks')">
+                    History and Landmarks
+                </li>
+                <li ng-class="{'filter-active': vm.category === 'Theatre and Cinema'}"
+                    ng-click="vm.toggleFilterChange('category', 'Theatre and Cinema')">
+                    Theatre and Cinema
+                </li>
+                <li ng-class="{'filter-active': vm.category === 'Water Activities'}"
+                    ng-click="vm.toggleFilterChange('category', 'Water Activities')">
+                    Water Activities
+                </li>
+                <li ng-class="{'filter-active': vm.category === 'Fun and Games'}"
+                    ng-click="vm.toggleFilterChange('category', 'Fun and Games')">
+                    Fun and Games
+                </li>
+            </ul>
+        </div>
+        <div class="r-sidebar__category" layout="column">
+            <h5><md-icon>local_offer</md-icon>Tags</h5>
+            <ul>
+                <li ng-class="{'filter-active': vm.participants === 'Family'}"
+                    ng-click="vm.toggleFilterChange('participants', 'Family')">
+                    Family Bonding
+                </li>
+                <li ng-class="{'filter-active': vm.participants === 'Date'}"
+                    ng-click="vm.toggleFilterChange('participants', 'Date')">
+                    Romantic
+                </li>
+                <li ng-class="{'filter-active': vm.participants === 'Solo'}"
+                    ng-click="vm.toggleFilterChange('participants', 'Solo')">
+                    Soul Searching
+                </li>
+                <li ng-class="{'filter-active': vm.participants === 'Group'}"
+                    ng-click="vm.toggleFilterChange('participants', 'Group')">
+                    Barkada Trip
+                </li>
+            </ul>
+        </div>
+        <div class="r-sidebar__category" layout="column">
+            <h5><md-icon>attach_money</md-icon>Budget</h5>
+            <div layout="row">
+                <input type="text" ng-model="vm.filters.min_budget" flex="40" placeholder="Min" ng-change="vm.onChange('min_budget', vm.filters.min_budget)" ng-model-options="{ debounce: 1000 }">
+                <span class="input__spacer" flex>-</span>
+                <input type="text" ng-model="vm.filters.max_budget" flex="40"placeholder="Max" ng-change="vm.onChange('max_budget', vm.filters.max_budget)" ng-model-options="{ debounce: 1000 }">
+            </div>
+        </div>
+    </md-sidenav>
+    <md-content class="r-main__content" flex layout-padding>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button md-dark" aria-label="Filters" ng-click="vm.toggleSideNav()">
+                    <md-icon md-svg-icon="assets/images/ic_menu_white_24px.svg"></md-icon>
+                </md-button>
+                <h1 class="r-splash__header" flex>
+                    Roam.io
+                </h1>
+            </div>
+        </md-toolbar>
+        <md-grid-list
+            md-cols-sm="1" md-cols-md="3" md-cols-gt-md="3"
+            md-row-height-gt-md="1.5:1" md-row-height="1:1"
+            md-gutter="15px">
+            <md-grid-tile ng-repeat="activity in vm.activities"
+                          md-rowspan="0.5"
+                          md-colspan="1"
+                          md-colspan-sm="1"
+                          ng-class="tile.background"
+                          ui-sref='activity({id: activity.id})'
+                          ng-style="{'background':'url({{activity.image_path}})', 'background-size': 'cover'}">
+                <md-grid-tile-footer>
+                    <h3>{{activity.title}}</h3>
+                    <h4><md-icon>location_on</md-icon>{{activity.address}}</h4>
+                </md-grid-tile-footer>
+            </md-grid-tile>
+        </md-grid-list>
+    </md-content>
+</div>

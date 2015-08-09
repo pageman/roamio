@@ -1,0 +1,12 @@
+<div class="r-splash" layout="column" layout-fill>
+    <h1 class="r-splash__header" flex="33">
+        Roam.io
+    </h1>
+    <div class="r-splash__form" flex="33">
+        <h1>What do you want to do today?</h1>
+        <div class="r-splash__form-group" layout="row">
+            <input type="text" layout-fill placeholder="Eat, hike, swim, chill, etc." ng-model="vm.query">
+            <md-button ng-click="vm.search()">Go!</md-button>
+        </div>
+    </div>
+</div>

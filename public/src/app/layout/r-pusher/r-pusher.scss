@@ -1,0 +1,14 @@
+.r-pusher {
+}
+
+.r-pusher--animating {
+    .r-main__sidebar * {
+        display: none;
+    }
+}
+
+.r-pusher--open {
+    .r-main__sidebar {
+        width: 320px;
+    }
+}

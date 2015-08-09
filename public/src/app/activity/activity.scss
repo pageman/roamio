@@ -1,0 +1,77 @@
+.r-activity {
+    background: $grey-lightest;
+    overflow: auto;
+    .md-toolbar-tools {
+        padding: 0 50px;
+    }
+    md-toolbar {
+        background-color: transparent;
+        h1 {
+            text-align: center;
+        }
+        md-icon {
+            width: 36px;
+            height: 36px;
+            svg {
+                fill: $black;
+            }
+        }
+    }
+}
+
+.r-activity__content {
+    background: $white;
+    padding: $spacing-medium;
+    width: 72%;
+    color: $grey-darker;
+    height: auto;
+
+    .r-activity__image {
+        min-height: 520px;
+        max-height: 600px;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .r-activity__container {
+        padding: 50px;
+    }
+
+    .r-activity__header {
+        font-weight: 700;
+        margin-bottom: $spacing-medium;
+        color: $grey-darker;
+    }
+
+    .r-activity__location {
+        text-transform: uppercase;
+        @include rem(font-size, 16px);
+        @include rem(line-height, 16px);
+        @include rem(letter-spacing, 2px);
+        margin-bottom: $spacing-medium;
+        color: $grey-darker;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        color: $grey-dark;
+        font-weight: 400;
+        margin: $spacing-medium 0;
+        color: $grey-darker;
+    }
+
+    h3 {
+        margin-bottom: $spacing-medium;
+        @include rem(font-size, 24px);
+        @include rem(line-height, 24px);
+        color: $grey-darker;
+    }
+}
